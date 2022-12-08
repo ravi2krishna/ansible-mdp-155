@@ -1,0 +1,17 @@
+---
+- name: Deploy Ecomm App on n1 server 
+  hosts: n1
+  become: yes
+
+  tasks:
+  - name: Install Git
+    yum:
+      name: git
+      state: present
+  
+  - name: Deploy Code
+    git:
+      dest: /var/www/html
+      repo: https://github.com/ravi2krishna/ecomm.git
+
+...      
