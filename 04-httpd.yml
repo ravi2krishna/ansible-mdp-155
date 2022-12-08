@@ -1,6 +1,7 @@
 ---
 - name: Setup HTTPD on n1 server 
   hosts: n1
+  become: yes
 
   tasks:
   - name: Install HTTPD
