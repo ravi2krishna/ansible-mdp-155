@@ -1,6 +1,6 @@
 ---
 - name: Modify Ports On Web Server
-  hosts: n1
+  hosts: n3
   become: yes
   vars:
     custom_port: 9090
